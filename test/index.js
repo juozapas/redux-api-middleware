@@ -1210,8 +1210,8 @@ test('apiMiddleware must use a [CALL_API].bailout function when present', (t) =>
 
 test('apiMiddleware must use an [CALL_API].endpoint function when present', (t) => {
   const api = nock('http://127.0.0.1')
-                .get('/api/users/1')
-                .reply(200);
+    .get('/api/users/1')
+    .reply(200);
   const anAction = {
     [CALL_API]: {
       endpoint: () => {
@@ -1233,8 +1233,8 @@ test('apiMiddleware must use an [CALL_API].endpoint function when present', (t) 
 
 test('apiMiddleware must use an [CALL_API].headers function when present', (t) => {
   const api = nock('http://127.0.0.1')
-                .get('/api/users/1')
-                .reply(200);
+    .get('/api/users/1')
+    .reply(200);
   const anAction = {
     [CALL_API]: {
       endpoint: 'http://127.0.0.1/api/users/1',
@@ -1256,8 +1256,8 @@ test('apiMiddleware must use an [CALL_API].headers function when present', (t) =
 
 test('apiMiddleware must dispatch a success FSA on a successful API call with a non-empty JSON response', (t) => {
   const api = nock('http://127.0.0.1')
-                .get('/api/users/1')
-                .reply(200, { username: 'Alice' }, { 'Content-Type': 'application/json' });
+    .get('/api/users/1')
+    .reply(200, { username: 'Alice' }, { 'Content-Type': 'application/json' });
   const anAction = {
     [CALL_API]: {
       endpoint: 'http://127.0.0.1/api/users/1',
@@ -1324,8 +1324,8 @@ test('apiMiddleware must dispatch a success FSA on a successful API call with a 
 
 test('apiMiddleware must dispatch a success FSA on a successful API call with an empty JSON response', (t) => {
   const api = nock('http://127.0.0.1')
-                .get('/api/users/1')
-                .reply(200, {}, { 'Content-Type': 'application/json' });
+    .get('/api/users/1')
+    .reply(200, {}, { 'Content-Type': 'application/json' });
   const anAction = {
     [CALL_API]: {
       endpoint: 'http://127.0.0.1/api/users/1',
@@ -1392,8 +1392,8 @@ test('apiMiddleware must dispatch a success FSA on a successful API call with an
 
 test('apiMiddleware must dispatch a success FSA on a successful API call with a non-JSON response', (t) => {
   const api = nock('http://127.0.0.1')
-                .get('/api/users/1')
-                .reply(200);
+    .get('/api/users/1')
+    .reply(200);
   const anAction = {
     [CALL_API]: {
       endpoint: 'http://127.0.0.1/api/users/1',
@@ -1461,8 +1461,8 @@ test('apiMiddleware must dispatch a success FSA on a successful API call with a 
 
 test('apiMiddleware must dispatch a failure FSA on an unsuccessful API call with a non-empty JSON response', (t) => {
   const api = nock('http://127.0.0.1')
-                .get('/api/users/1')
-                .reply(404, { error: 'Resource not found' }, { 'Content-Type': 'application/json' });
+    .get('/api/users/1')
+    .reply(404, { error: 'Resource not found' }, { 'Content-Type': 'application/json' });
   const anAction = {
     [CALL_API]: {
       endpoint: 'http://127.0.0.1/api/users/1',
@@ -1529,8 +1529,8 @@ test('apiMiddleware must dispatch a failure FSA on an unsuccessful API call with
 
 test('apiMiddleware must dispatch a failure FSA on an unsuccessful API call with an empty JSON response', (t) => {
   const api = nock('http://127.0.0.1')
-                .get('/api/users/1')
-                .reply(404, {}, { 'Content-Type': 'application/json' });
+    .get('/api/users/1')
+    .reply(404, {}, { 'Content-Type': 'application/json' });
   const anAction = {
     [CALL_API]: {
       endpoint: 'http://127.0.0.1/api/users/1',
@@ -1597,8 +1597,8 @@ test('apiMiddleware must dispatch a failure FSA on an unsuccessful API call with
 
 test('apiMiddleware must dispatch a failure FSA on an unsuccessful API call with a non-JSON response', (t) => {
   const api = nock('http://127.0.0.1')
-                .get('/api/users/1')
-                .reply(404);
+    .get('/api/users/1')
+    .reply(404);
   const anAction = {
     [CALL_API]: {
       endpoint: 'http://127.0.0.1/api/users/1',

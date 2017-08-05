@@ -70,8 +70,8 @@ async function actionWith(descriptor, args) {
   try {
     descriptor.payload = await (
       typeof descriptor.payload === 'function' ?
-      descriptor.payload(...args) :
-      descriptor.payload
+        descriptor.payload(...args) :
+        descriptor.payload
     );
   } catch (e) {
     descriptor.payload = new InternalError(e.message);
@@ -81,8 +81,8 @@ async function actionWith(descriptor, args) {
   try {
     descriptor.meta = await (
       typeof descriptor.meta === 'function' ?
-      descriptor.meta(...args) :
-      descriptor.meta
+        descriptor.meta(...args) :
+        descriptor.meta
     );
   } catch (e) {
     delete descriptor.meta;

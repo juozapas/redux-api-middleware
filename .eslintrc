@@ -5,9 +5,11 @@
     "browser": true,
     "es6": true
   },
-  "ecmaFeatures": {
-    "experimentalObjectRestSpread": true,
-    "modules": true
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "modules": true
+    }
   },
   "rules": {
     "babel/arrow-parens": [2, "always"],
